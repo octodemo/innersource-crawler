@@ -24,10 +24,11 @@ if __name__ == "__main__":
 
     # Set the topic 
     topic = os.getenv("TOPIC")
+    # Check if there is more than
     if topic:
         topic = topic.split(",")
     else:
-        topic = ["TOPIC"]
+        topic = []
     organization = os.getenv("ORGANIZATION")
 
     # Get all repos from organization
