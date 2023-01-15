@@ -22,8 +22,12 @@ if __name__ == "__main__":
     else:
         gh = github3.login(token=os.getenv("GH_TOKEN"))
 
-    # Set the topic
+    # Set the topic 
     topic = os.getenv("TOPIC")
+    if topic:
+        topic = topic.split(",")
+    else:
+        topic = ["TOPIC"]
     organization = os.getenv("ORGANIZATION")
 
     # Get all repos from organization
